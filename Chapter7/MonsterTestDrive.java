@@ -1,7 +1,10 @@
 package Chapter7;
 
 public class MonsterTestDrive {
+
+
     public static void main(String[] args){
+
         Monster [] ma = new Monster[3];
         ma[0] = new Vampire();
         ma[1] = new Dragon();
@@ -17,6 +20,7 @@ class Monster {
 
     System.out.println("arrrgh");
     return true;
+
 }
 }
 
