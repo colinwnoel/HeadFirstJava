@@ -15,14 +15,14 @@ public class Student {
 
         int numStudents = 0;
 
-        //Creating the student objects, adding them to the Students array and updating their fields
+        //Creating the student objects, updating their fields and adding them to the Students array
         while (numStudents < Students.length) {
             Student thisStudent = new Student();
-            Students[numStudents] = thisStudent;
             thisStudent.name = names[numStudents];
             thisStudent.examScore = examScores[numStudents];
             //Calling the addGrade Method which returns a String letter grade from a float exam score
             thisStudent.gradeLetter = thisStudent.addGrade(thisStudent.examScore);
+            Students[numStudents] = thisStudent;
             numStudents++;
 
         }
