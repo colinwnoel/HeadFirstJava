@@ -35,7 +35,7 @@ public class Student {
         }
     }
 
-
+    //method which returns a string grade letter from a provided float test score
     public String addGrade(float myStudentGrade) {
 
         if (myStudentGrade >= 90) {
