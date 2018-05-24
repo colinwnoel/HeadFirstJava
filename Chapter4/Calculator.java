@@ -19,7 +19,6 @@ public int divide (int num1, int num2) {
     return (num1 / num2);
 }
 
-
 public static void main(String[] args){
     Calculator myCalc = new Calculator();
     System.out.println("Addition: " + myCalc.add(5,7));
@@ -27,9 +26,6 @@ public static void main(String[] args){
     System.out.println("Multiplication: " + myCalc.multiply(2,10));
     System.out.println("Division: " + myCalc.divide(10,2));
 }
-
-
-
 }
 
 

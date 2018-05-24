@@ -17,7 +17,8 @@ class Foo2{
      int x;
 
     public static void go(){
-        System.out.println(x);
+        //uncomment below line to test
+        //System.out.println(x);
     }
 
     public static void main(String[]args){
@@ -28,16 +29,16 @@ class Foo2{
 }
 
 class Foo3{
-    final int x;
-
-    public void go(){
-        System.out.println(x);
-    }
-
-    public static void main(String[]args){
-        Foo3 myFoo3 = new Foo3();
-        myFoo3.go();
-    }
+//    final int x;
+//
+//    public void go(){
+//        System.out.println(x);
+//    }
+//
+//    public static void main(String[]args){
+//        Foo3 myFoo3 = new Foo3();
+//        myFoo3.go();
+//    }
 }
 
 class Foo4{
