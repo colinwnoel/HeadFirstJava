@@ -9,8 +9,12 @@ public class GoodDog {
     }
 
     public void setSize(int s){
-        size = s;
+        if (s > 0) {
 
+            size = s;
+        }else{
+            System.out.println("Number is invalid");
+        }
     }
 
     void bark() {
@@ -24,4 +28,10 @@ public class GoodDog {
     }
 
 
-}
+
+
+
+    }
+
+
+
