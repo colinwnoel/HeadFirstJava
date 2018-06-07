@@ -44,7 +44,7 @@ public class DiceRollGame {
 //        System.out.println("Sum of the numbers: " + sum);
 
         int sum = 0;
-        for (int dieValue:myDice){
+        for (int dieValue:myDice) {
             sum += dieValue;
         }
 
