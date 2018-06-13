@@ -13,10 +13,9 @@ public class DiceRollGame {
         myGame.determineWinner(myDice1);
 
 
-
     }
 
-    public void determineWinner(Dice aDice){
+    public void determineWinner(Dice aDice) {
 
         //Creating an ArrayList of ValueOccurrances - 6 of them, one for each possible value of a die roll
         ArrayList<ValueOccurrance> listOccurrance = new ArrayList<>();
@@ -39,6 +38,7 @@ public class DiceRollGame {
         int numPairs = 0;
         int numThrees = 0;
         int numFours = 0;
+
         for (ValueOccurrance diceRoll : listOccurrance) {
             if (diceRoll.getOcc() > 0) {
                 if (diceRoll.getOcc() == 2) {
@@ -58,20 +58,79 @@ public class DiceRollGame {
                 }
             }
         }
+
+// Test code for straight type 1
+
+//        listOccurrance.get(0).setValue(1,1);
+//        System.out.println(listOccurrance.get(0).getOcc());
+//        listOccurrance.get(1).setValue(2,1);
+//        System.out.println(listOccurrance.get(1).getOcc());
+//        listOccurrance.get(2).setValue(3,1);
+//        System.out.println(listOccurrance.get(2).getOcc());
+//        listOccurrance.get(3).setValue(4,1);
+//        System.out.println(listOccurrance.get(3).getOcc());
+//        listOccurrance.get(4).setValue(5,1);
+//        System.out.println(listOccurrance.get(4).getOcc());
+//        listOccurrance.get(5).setValue(6,0);
+//        System.out.println(listOccurrance.get(5).getOcc());
+
+// Test code for straight type 2
+
+//       listOccurrance.get(0).setValue(1,0);
+//       System.out.println(listOccurrance.get(0).getOcc());
+//        listOccurrance.get(1).setValue(2,1);
+//        System.out.println(listOccurrance.get(1).getOcc());
+//        listOccurrance.get(2).setValue(3,1);
+//        System.out.println(listOccurrance.get(2).getOcc());
+//       listOccurrance.get(3).setValue(4,1);
+//        System.out.println(listOccurrance.get(3).getOcc());
+//        listOccurrance.get(4).setValue(5,1);
+//        System.out.println(listOccurrance.get(4).getOcc());
+//        listOccurrance.get(5).setValue(6,1);
+//        System.out.println(listOccurrance.get(5).getOcc());
+
+
         //handling pairs
+
         if (numPairs > 1) {
             System.out.println("two pair");
             //handling a full house - 1 pair 1 three of a kind
-        }else if (numPairs == 1 && numThrees == 1) {
+        } else if (numPairs == 1 && numThrees == 1) {
             System.out.println("full house");
+        } else if (numPairs == 1) {
+            System.out.println("one pair");
         }
         //handling 4 of a kind
         if (numFours == 1) {
             System.out.println("four of a kind");
         }
         //handling 3 of a kind
-        if (numThrees == 1) {
+        if (numThrees == 1 && numPairs == 0) {
             System.out.println("three of a kind");
+        }
+
+
+//        if ((listOccurrance.get(0).getOcc() == 1 && listOccurrance.get(1).getOcc() == 1 && listOccurrance.get(2).getOcc() == 1 && listOccurrance.get(3).getOcc() == 1 && listOccurrance.get(4).getOcc() == 1)
+//                || (listOccurrance.get(1).getOcc() == 1 && listOccurrance.get(2).getOcc() == 1 && listOccurrance.get(3).getOcc() == 1 && listOccurrance.get(4).getOcc() == 1 && listOccurrance.get(5).getOcc() == 1))
+//            System.out.println("We have a straight!");
+
+
+
+        // more elegant way to find a straight
+        int length = 0;
+        int occurances = 0;
+            while (length <= 4){
+
+            if (listOccurrance.get(length).getOcc() == listOccurrance.get(length +1).getOcc()){
+             occurances++;
+            }
+            length++;
+
+
+        }
+
+        if (occurances == 4){
+                System.out.println("We have a straight");
         }
 
     }

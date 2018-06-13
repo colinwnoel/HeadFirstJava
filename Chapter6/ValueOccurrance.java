@@ -14,6 +14,10 @@ package Chapter6;
         public void setValue(){
                  occurrances += 1;
         }
+        public void setValue(int val,int occurance){
+            value = val;
+            occurrances = occurance;
+        }
 
         public int getValue() {
             return value;
